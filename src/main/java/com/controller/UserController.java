@@ -21,6 +21,11 @@ public class UserController {
     @Autowired
     UserMapper userMapper;
 
+    @GetMapping("/hello")
+    public String hello(){
+        return "hello world";
+    }
+
     @GetMapping("/select")
     public void getAll() {
         List<User> users = userMapper.selectList(null);
